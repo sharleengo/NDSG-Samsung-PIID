@@ -1,6 +1,6 @@
 # NDSG-Samsung-PIID
 A Personally Identifiable Information (PII) detector system implemented by leveraging an SDN/NFV-based architecture with Ryu as the SDN controller, OpenStack as the NFVI and VIM, and OpenSource Mano as the NFV Orchestrator and VNF Manager. 
-<img src="https://drive.google.com/thumbnail?id=1JnHZMeXR6pRUzoM3bYAzANOoXdDzCwRi" width="100%">
+<img src="https://github.com/sharleengo/NDSG-Samsung-PIID/blob/master/11_20.png" width="100%">
 - - - -
 ### Initial Configurations ###
 * For all machines, the base iso image is Ubuntu 16.04: http://releases.ubuntu.com/16.04/
