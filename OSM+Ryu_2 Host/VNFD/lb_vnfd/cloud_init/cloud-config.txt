@@ -1,0 +1,9 @@
+#cloud-config
+password: password
+chpasswd: { expire: False }
+ssh_pwauth: True
+ssh_authorized_keys:
+ - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDqvGDbmUd+xlZQe6E2mrEgAXKuPudGN6MYf+dwgSc2T2qee8DPJZkNPyjDJAasnfPEFd2O7v9tDBcOnA2XOEPLNShkGZKMg1SJeXVKKwPrqXtqclBpfF2yhnrZ9fyL+cUEwU8L2n1wfh0uL64iLdRceGtCatqUdVHWFMDaQ96q3u/xHiWrvHsTf8Kn/XoMiBIsbnSK73qV2xrzAm/8KYr7YMUscJzrVvnwSacyBRwtEa45eV8JQgK72V0QahhRGi2/5qVzk+HZRJPXh8rCKU9sLjesbAkKMniwuzRXiKfZR/WNGMWtktehLC8AulfbmFk5ENi7k5puBXNJsKntYNHB sharleen@Toshiba-Satellite-S55-A
+bootcmd:
+ - echo $(hostname -I | cut -d\  -f1) $(hostname) | sudo tee -a /etc/hosts
+

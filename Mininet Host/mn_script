@@ -1,0 +1,50 @@
+py c_1.setIP('192.168.100.81/24')
+py s_1.setIP('192.168.100.82/24')
+
+c_1 touch "client_trace"
+c_1 chmod 777 "client_trace"
+s_1 touch "server_trace"
+s_1 chmod 777 "server_trace"
+c_1 sudo tshark -i c_1-eth0 -w "client_trace" -F libpcap &
+s_1 sudo tshark -i s_1-eth0 -w "server_trace" -F libpcap &
+s_1 iptables -A OUTPUT -p tcp --tcp-flags RST RST -s 192.168.1.20 -j DROP
+s_1 nohup python3 start_server.py &
+
+py time.sleep(5)
+
+c_1 python send_packets.py 192.168.100.82 1121 20 &
+c_1 f1=$!
+
+py time.sleep(300)
+
+c_1 python send_packets.py 192.168.100.82 1122 50 &
+c_1 f2=$!
+
+py time.sleep(300)
+
+c_1 python send_packets.py 192.168.100.82 1123 40 &
+c_1 f3=$!
+
+py time.sleep(600)
+
+c_1 python send_packets.py 192.168.100.82 1124 30 &
+c_1 f4=$!
+
+py time.sleep(300)
+
+c_1 python send_packets.py 192.168.100.82 1125 50 &
+c_1 f5=$!
+
+py time.sleep(600)
+
+c_1 kill $f3
+
+py time.sleep(600)
+
+c_1 kill $f4
+
+py time.sleep(300)
+
+c_1 kill $f5
+
+py time.sleep(600)

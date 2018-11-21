@@ -1,0 +1,2 @@
+02a7e16bb46d82049604f57f29e202aa  lb_vnfd.yaml
+8df30e3f028caac067c389371e19e151  cloud_init/cloud-config.txt

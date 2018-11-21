@@ -1,0 +1,2 @@
+d888356ffafead026f1ea7300208d59c  piid_vnfd.yaml
+8df30e3f028caac067c389371e19e151  cloud_init/cloud-config.txt

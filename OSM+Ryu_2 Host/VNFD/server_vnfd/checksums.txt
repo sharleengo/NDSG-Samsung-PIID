@@ -1,0 +1,2 @@
+1b5e1f11d41b73ca49ad7c31632bfc3a  server_vnfd.yaml
+c9deb3e1494ac27ef466426834ec080a  cloud_init/cloud-config.txt

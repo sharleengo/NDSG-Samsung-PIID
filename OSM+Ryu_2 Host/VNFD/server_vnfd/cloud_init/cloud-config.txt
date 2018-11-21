@@ -1,0 +1,7 @@
+#cloud-config
+password: password
+chpasswd: { expire: False }
+ssh_pwauth: True
+sudo: ['ALL=(ALL) NOPASSWD:ALL']
+runcmd:
+ - ./start.sh 
