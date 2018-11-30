@@ -29,7 +29,7 @@ client_socket = conf.L2socket(iface=active_interface)
 
 seq = SYNACK.ack
 
-tracefile = rdpcap("harber.pcap")
+#tracefile = rdpcap("harber.pcap")
 #payload = tracefile[165][Raw].load
 payload = 'GET /foo.html?user_firstname=Alice&id=17&number=18367356451&pid=621535345&key=djvbgdfhvh&search=dvbhdgfvghvdvfd872&y=7266e63edfb HTTP/1.1\r\nHost: imagevenue.com\r\nCookie: a=293&b=gdshjgfgdg&m=hsgfcgsdcvgd8736&g=00s9229daa&age=39&id=27&loc=hdfgett35&ld=hfgvghdfv&yud=ndbvgdfvsejvhh\r\nETag: 2039-2dc90ea2-12\r\nReferer: http://www.facebook.com/?user_id=89&image=6254326&uh=73632&hdfs=gfdgfhsdvds&query=hvfdgvtsftfc&_df=bdsvgdfsgcesvfcgsevcjgsdvgv&ps=vbdgfvsdvcgsdh&td=xbvg\r\nAccept-Encoding: deflate,gzip\r\n\r\n'
 
